@@ -33,7 +33,7 @@ class Home extends Component {
 
 ## Props
 
-- `key` (string)
+- `lsKey` (string)
 - `value` (string)
 - `sync` (bool)
   To sync after value updates, default is `true`

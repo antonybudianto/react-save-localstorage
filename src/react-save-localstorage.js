@@ -20,7 +20,7 @@ class SaveLocalStorage extends Component {
   }
 
   saveLocalStorage() {
-    const { key, value } = this.props;
+    const { lsKey: key, value } = this.props;
     setItem(key, value);
   }
 
@@ -30,7 +30,7 @@ class SaveLocalStorage extends Component {
 }
 
 SaveLocalStorage.propTypes = {
-  key: PropTypes.string,
+  lsKey: PropTypes.string,
   value: PropTypes.string,
   sync: PropTypes.bool
 };
