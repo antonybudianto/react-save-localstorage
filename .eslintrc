@@ -1,14 +1,10 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "plugins": ["react"],
+  "plugins": ["react", "jest"],
   "parser": "babel-eslint",
-  "globals": {
-    "localStorage": true,
-    "window": true,
-    "describe": true,
-    "it": true,
-    "expect": true,
-    "setTimeout": true
+  "env": {
+    "browser": true,
+    "jest": true
   },
   "parserOptions": {
     "sourceType": "module",
