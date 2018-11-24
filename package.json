@@ -1,6 +1,6 @@
 {
   "name": "react-save-localstorage",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React component to save data to local storage",
   "main": "dist/react-save-localstorage.js",
   "umd:main": "dist/react-save-localstorage.umd.js",
