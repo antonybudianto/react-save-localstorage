@@ -1,0 +1,52 @@
+{
+  "name": "react-save-localstorage",
+  "version": "0.1.0",
+  "description": "React component to save data to local storage",
+  "main": "dist/react-save-localstorage.js",
+  "umd:main": "dist/react-save-localstorage.umd.js",
+  "module": "dist/react-save-localstorage.mjs",
+  "source": "src/react-save-localstorage.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle --jsx=React.createElement",
+    "dev": "microbundle watch --jsx=React.createElement --compress=false",
+    "prerelease": "npm run build",
+    "release": "npm publish",
+    "test": "jest",
+    "test:ci": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonybudianto/react-save-localstorage.git"
+  },
+  "keywords": [
+    "react",
+    "localstorage"
+  ],
+  "author": "Antony Budianto <antonybudianto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonybudianto/react-save-localstorage/issues"
+  },
+  "homepage": "https://github.com/antonybudianto/react-save-localstorage#readme",
+  "peerDependencies": {
+    "react": "16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.9.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "microbundle": "^0.7.0",
+    "prop-types": "^15.6.2",
+    "react": "16.6.3",
+    "react-testing-library": "^5.3.0"
+  }
+}
