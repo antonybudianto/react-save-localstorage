@@ -30,7 +30,7 @@ describe('SaveLocalStorage', () => {
     expect(localStorage.setItem).toHaveBeenCalledTimes(1);
   });
 
-  it('should save data from render - rerender with same value', async () => {
+  it('should save data from render - rerender with different value', async () => {
     let email = localStorage.getItem('email');
     expect(email).toBeNull();
     const { rerender } = render(
@@ -42,6 +42,20 @@ describe('SaveLocalStorage', () => {
     email = localStorage.getItem('email');
     expect(email).toBe('world');
     expect(localStorage.setItem).toHaveBeenCalledTimes(2);
+  });
+
+  it('should save data from render - rerender with different value and sync off', async () => {
+    let email = localStorage.getItem('email');
+    expect(email).toBeNull();
+    const { rerender } = render(
+      <SaveLocalStorage sync={false} lsKey="email" value="hello" />
+    );
+    email = localStorage.getItem('email');
+    expect(email).toBe('hello');
+    rerender(<SaveLocalStorage sync={false} lsKey="email" value="world" />);
+    email = localStorage.getItem('email');
+    expect(email).toBe('hello');
+    expect(localStorage.setItem).toHaveBeenCalledTimes(1);
   });
 
   it('should not save data from render - with empty value', async () => {
