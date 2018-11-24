@@ -24,7 +24,7 @@ class Home extends Component {
             })
           }
         />
-        <SaveLocalStorage key="email" value={this.state.email} />
+        <SaveLocalStorage lsKey="email" value={this.state.email} />
       </div>
     );
   }
