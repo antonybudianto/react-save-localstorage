@@ -48,7 +48,7 @@ describe('SaveLocalStorage', () => {
     );
     email = localStorage.getItem('email');
     expect(email).toBe('hello');
-    rerender();
+    rerender(<SaveLocalStorage lsKey="email" value="hello" />);
     expect(localStorageMock.setItem).toHaveBeenCalledTimes(1);
   });
 
