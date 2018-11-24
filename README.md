@@ -1,5 +1,7 @@
 # react-save-localstorage
 
+Save and sync your data on render phase to localStorage safely
+
 ```js
 import React, { Component } from 'react';
 import SaveLocalStorage from 'react-save-localstorage';
