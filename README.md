@@ -1,5 +1,9 @@
 # react-save-localstorage
 
+[![npm version](https://badge.fury.io/js/react-save-localstorage.svg)](https://badge.fury.io/js/react-save-localstorage)
+[![Build Status](https://travis-ci.org/antonybudianto/react-save-localstorage.svg?branch=master)](https://travis-ci.org/antonybudianto/react-save-localstorage)
+
+
 Save and sync your data on render phase to localStorage safely
 
 > Try it [live at StackBlitz](https://stackblitz.com/edit/demo-react-save-localstorage)
