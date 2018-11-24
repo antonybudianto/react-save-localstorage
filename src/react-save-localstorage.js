@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { setItem } from './util/localstorage';
 
 class SaveLocalStorage extends Component {
   constructor(props) {
@@ -10,18 +9,21 @@ class SaveLocalStorage extends Component {
   }
 
   componentDidMount() {
-    this.saveLocalStorage();
+    this.saveLocalStorage({ init: true });
   }
 
   componentDidUpdate(props) {
     if (this.props.value !== props.value && this.props.sync) {
-      this.saveLocalStorage();
+      this.saveLocalStorage({});
     }
   }
 
-  saveLocalStorage() {
+  saveLocalStorage({ init }) {
     const { lsKey: key, value } = this.props;
-    setItem(key, value);
+    if (init && value === '') {
+      return;
+    }
+    localStorage.setItem(key, value);
   }
 
   render() {
