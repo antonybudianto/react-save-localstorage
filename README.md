@@ -20,7 +20,6 @@ class Home extends Component {
     email: ''
   };
   render() {
-    console.log('render');
     return (
       <div>
         <SaveLocalStorage value={this.state.email} lsKey="email">
