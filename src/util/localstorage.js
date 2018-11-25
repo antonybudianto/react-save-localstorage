@@ -11,17 +11,3 @@ export function isLocalStorageReady() {
     return false;
   }
 }
-
-export function setItem(key, value) {
-  if (!isLocalStorageReady()) {
-    return;
-  }
-  localStorage.setItem(key, value);
-}
-
-export function getItem(key) {
-  if (!isLocalStorageReady()) {
-    return;
-  }
-  return localStorage.getItem(key);
-}
