@@ -22,18 +22,27 @@ class Home extends Component {
   render() {
     return (
       <div>
+        {/* Mode 1: read only */}
+        <SaveLocalStorage lsKey="lang">
+          {lang => <div>Language: {lang || '-'}</div>}
+        </SaveLocalStorage>
+
+        {/* Mode 2: write only */}
+        <SaveLocalStorage lsKey="emailBackup" value={this.state.email} />
+
+        {/* Mode 3: dual */}
         <SaveLocalStorage value={this.state.email} lsKey="email">
-          {value => (
+          {v => (
             <div>
               <input
-                value={value}
+                value={v}
                 onChange={e =>
                   this.setState({
                     email: e.target.value
                   })
                 }
               />
-              <div>Welcome, {value || 'Guest'}</div>
+              <div>Welcome, {v || 'Guest'}</div>
             </div>
           )}
         </SaveLocalStorage>
