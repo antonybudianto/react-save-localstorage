@@ -52,8 +52,6 @@ class Home extends Component {
 }
 ```
 
-> Setting initial state `email` to non-empty string will always reset data in localStorage on page load
-
 ## Props
 
 - `lsKey` (string, required)
