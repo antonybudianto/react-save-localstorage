@@ -18,7 +18,7 @@ class SaveLocalStorage extends Component {
     this.localStorageReady = isLocalStorageReady();
     let value = this.props.value;
     if (this.localStorageReady) {
-      value = value || localStorage.getItem(this.props.lsKey);
+      value = localStorage.getItem(this.props.lsKey) || value;
       this.saveLocalStorage({ init: true, value });
     }
   }
