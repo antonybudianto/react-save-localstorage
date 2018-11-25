@@ -14,6 +14,7 @@
     "dev": "microbundle watch --jsx=React.createElement --compress=false",
     "prerelease": "npm run build",
     "release": "npm publish --access public",
+    "lint": "eslint src",
     "test": "jest",
     "test:ci": "jest --coverage"
   },
