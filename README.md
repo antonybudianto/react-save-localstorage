@@ -19,23 +19,25 @@ class Home extends Component {
   state = {
     email: ''
   };
-  componentDidMount() {
-    this.setState({
-      email: localStorage.getItem('email') || ''
-    });
-  }
   render() {
+    console.log('render');
     return (
       <div>
-        <input
-          value={this.state.email}
-          onChange={e =>
-            this.setState({
-              email: e.target.value
-            })
-          }
-        />
-        <SaveLocalStorage lsKey="email" value={this.state.email} />
+        <SaveLocalStorage value={this.state.email} lsKey="email">
+          {value => (
+            <div>
+              <input
+                value={value}
+                onChange={e =>
+                  this.setState({
+                    email: e.target.value
+                  })
+                }
+              />
+              <div>Welcome, {value || 'Guest'}</div>
+            </div>
+          )}
+        </SaveLocalStorage>
       </div>
     );
   }
@@ -44,10 +46,15 @@ class Home extends Component {
 
 ## Props
 
-- `lsKey` (string)
+- `lsKey` (string, required)
 - `value` (string)
 - `sync` (bool)
+
   To sync after value updates, default is `true`
+
+- `children` (func)
+
+  Function that accept loaded `value` from localStorage
 
 ## License
 
