@@ -63,7 +63,7 @@ describe('SaveLocalStorage', () => {
     expect(email).toBeNull();
     render(<SaveLocalStorage lsKey="email" value="" />);
     email = localStorage.getItem('email');
-    expect(email).toBe(null);
+    expect(email).toBeNull();
     expect(localStorage.setItem).toHaveBeenCalledTimes(0);
   });
 });
