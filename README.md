@@ -54,15 +54,24 @@ class Home extends Component {
 
 ## Props
 
-- `lsKey` (string, required)
-- `value` (string)
-- `sync` (bool)
+- **lsKey** (string, required)
+- **value** (string)
+- **sync** (bool)
 
   To sync after value updates, default is `true`
 
-- `children` (func)
+- **children** (func)
 
-  Function that accept loaded `value` from localStorage
+  Function that accept loaded **value** from localStorage
+
+- **onSave** (func)
+
+  Function that accept object containing:
+
+  - `init` (boolean that indicated it's the first mount)
+  - `value` (the value being saved)
+
+  This is called for every value updates.
 
 ## License
 
