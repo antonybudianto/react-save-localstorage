@@ -37,6 +37,7 @@ class SaveLocalStorage extends Component {
     if (this.localStorageReady) {
       localStorage.setItem(key, value);
       this.setState({ value: value });
+      this.props.onSave({ init, value });
     }
   }
 
@@ -53,11 +54,13 @@ SaveLocalStorage.propTypes = {
   lsKey: PropTypes.string.isRequired,
   value: PropTypes.string,
   sync: PropTypes.bool,
-  children: PropTypes.func
+  children: PropTypes.func,
+  onSave: PropTypes.func
 };
 
 SaveLocalStorage.defaultProps = {
-  sync: true
+  sync: true,
+  onSave: () => {}
 };
 
 export default SaveLocalStorage;
