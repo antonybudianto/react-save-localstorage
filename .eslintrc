@@ -10,6 +10,11 @@
     "prettier/prettier": "error",
     "no-useless-catch": "off"
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
