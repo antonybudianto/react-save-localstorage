@@ -1,10 +1,19 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "plugins": ["react", "jest"],
+  "plugins": ["react", "jest", "prettier"],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "jest": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-useless-catch": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "parserOptions": {
     "sourceType": "module",
